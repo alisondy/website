@@ -80,10 +80,11 @@ $terminal-width: 100%;
       border-bottom-left-radius: $terminal-border-radius;
       border-bottom-right-radius: $terminal-border-radius;
       color: #fff;
-      overflow: scroll;
-      padding: 0;
+      overflow: visible;
+      padding: 20px;
       font-size: 0;
       width: 100%;
+      margin: 0;
       -webkit-font-smoothing: antialiased;
     }
 

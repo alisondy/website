@@ -5,9 +5,9 @@ $enable-rounded: true;
 $enable-shadows: true;
 
 // Border radius
-$border-radius: .25rem;
-$border-radius-lg: .3rem;
-$border-radius-sm: .2rem;
+// $border-radius: .25rem;
+// $border-radius-lg: .3rem;
+// $border-radius-sm: .2rem;
 
 // Other colors
 $slack-green: #74cdb0;
@@ -15,21 +15,35 @@ $twitter-blue: #1da1f2;
 $linkedin-blue: #0e76a8;
 
 // Flux color palette
-$flux-darkest-blue: #243f80;
-$flux-dark-blue: #3d6ddd;
-$flux-lighter-blue: #5f86e3;
-$flux-light-blue: #c3d2f4;
+
+$flux-blue: #3d6ddd;
+$flux-dark-blue: darken($flux-blue, 15%);
+$flux-darkest-blue: darken($flux-dark-blue, 15%);
+$flux-light-blue: lighten($flux-blue, 15%);
+$flux-lightest-blue: lighten($flux-light-blue, 15%);
 
 $flux-black: #1a1a1a;
 $flux-white: #ffffff;
+// $btn-link-color: $flux-black ;
 
-$primary: $flux-dark-blue;
-$secondary: $flux-light-blue;
-$dark: $flux-black;
-$blue: $flux-dark-blue;
+$primary: $flux-blue;
+$secondary: $flux-lightest-blue;
+$light: #f5f5f5;
+// $dark: $flux-black;
+// $blue: $flux-blue;
+$green: hsl(141, 53%, 53%);
+// // $primary-light: lighten($primary, 75%);
+// $primary-light: lighten($primary, 75%) !default;
+// // $secondary: #FFA630 !default;
+// $success: #3772FF !default;
+// $info: #C0E0DE !default;
+// $warning: #ED6A5A !default;
+// $danger: #ED6A5A !default;
+// $white: #fff !default;
+// $light: #D3F3EE !default;
 
 $google_font_name: "Montserrat";
-$google_font_family: "Montserrat:300,300i,400,400i,600,600i,700,700i";
+$google_font_family: "Montserrat:300,300i,400,400i,700,700i";
 
 $navbar-dark-color: rgba($flux-white, 0.75) !default;
 $navbar-dark-hover-color: rgba($flux-white, 0.5) !default;

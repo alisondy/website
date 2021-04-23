@@ -1,0 +1,19 @@
+{{ $icon := .Get "icon" | default "fa-lightbulb" }}
+{{ $url_text := .Get "url_text" }}
+{{ $link_url := .Get "link_url" | default "#" }}
+{{ $link_title := .Get "link_title" | default "Get started" }}
+
+  <div class="card bg-dark border-dark">
+    <div class="card-body ">
+      <h2><i class="{{ if not (or (hasPrefix $icon "fas ") (hasPrefix $icon "fab ")) }}fas {{ end }}{{ $icon }}"></i></h2>
+      <h3 class="card-title">{{ .Get "title" | markdownify }}</h3>
+      <p class="card-text" style="color: inherit;">{{ .Inner | markdownify }}</p>
+    </div>
+    <div class="card-footer bg-dark border-dark">
+      <a href="{{ $link_url }}"> 
+        <button type="button" class="btn btn-outline-light" role="button">
+          {{ $link_title }}
+        </button>
+      </a>
+    </div>
+  </div>

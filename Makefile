@@ -44,7 +44,7 @@ $(FONT_AWESOME_TARGET): ## Downloads the Docsy Font Awesome dependency.
 	ln -sf Font-Awesome themes/docsy/assets/vendor/Font-Awesome-${FONT_AWESOME_SEMVER}
 
 gen-content: ## Generates content from external sources.
-	hack/gen-content.sh
+	# hack/gen-content.sh
 	hack/import-flux2-docs.sh
 
 serve: gen-content theme ## Spawns a development server.

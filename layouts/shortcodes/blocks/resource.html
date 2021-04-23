@@ -1,12 +1,17 @@
 {{ $youtube := .Get "youtube" }}
 {{ $youtube_url := print "https://www.youtube.com/watch?v=" $youtube }}
-{{ $thumbnail := printf "https://i3.ytimg.com/vi/%s/0.jpg" $youtube }}
+{{ $thumbnail := printf "https://i3.ytimg.com/vi/%s/hq720.jpg" $youtube }}
 
 {{ $url := .Get "url" | default $youtube_url }}
 {{ $title := .Get "title" | default "Video title" }}
-
-<div class="col-lg-4 mb-5 mb-lg-0 text-center ">
-  <a href="{{ $url }}"><img class="img-fluid img-thumbnail" src="{{ $thumbnail }}"></a>
-  <a href="{{ $url }}"><h4>{{ $title | markdownify }}</h4></a>
-  <p>{{ .Inner | markdownify }}</p>
+<div class="col-lg-4 mb-4 d-flex align-items-stretch">
+  <a href="{{ $url }}">
+  <div class="card with-hover card-transparent  h-100 shadow text-dark" >
+    <img class="card-img-top" src="{{ $thumbnail }}">
+    <div class="card-body">
+      <h3 class="card-title">{{ $title | markdownify }}</h3>
+      <p class="card-text" style="color: inherit;">{{ .Inner | markdownify }}</p>
+    </div>
+  </div>
+  </a>
 </div>

@@ -1,0 +1,10 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+{{ $link_url := .Get "link_url" | default "#" }}
+{{ $link_title := .Get "link_title" | default "Get started" }}
+<!-- {{ $size := .Get "size" | default "med"}} -->
+
+<a href="{{ $link_url }}"> 
+  <button type="button" class="btn btn-outline-light" role="button">
+    {{ $link_title }}
+  </button>
+</a>

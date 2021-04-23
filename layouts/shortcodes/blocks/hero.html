@@ -8,8 +8,6 @@
 {{/* Height can be one of: auto, min, med, max, full. */}}
 {{ $height := .Get "height" | default "max" }}
 {{ $byline := .Get "byline" | default "" }}
-{{ $link_url := .Get "link_url" | default "#" }}
-{{ $link_title := .Get "link_title" | default "Get started" }}
 {{ with $promo_image }}
 {{ $promo_image_big := (.Fill (printf "1920x1080 %s" $image_anchor)) }}
 {{ $promo_image_small := (.Fill (printf "960x540 %s" $image_anchor)) }}
@@ -29,21 +27,20 @@
 </style>
 {{ end }}
 <section id="{{ $blockID }}" class="row td-hero-block td-overlay -bg-{{ $col_id }} ">
-  <div class="container td-overlay__inner" style="padding: 20px;">
-      <div class="row">
-        <div class="col-md">
-            {{ with .Get "title" }}<h1 class="display-1">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-hero-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
-            {{ with .Get "subtitle" }}<p>{{ . | html }}</p>{{ end }}
 
+  <div class="container td-overlay__inner" style="padding: 20px;">
+    
+    <div class="row">
+      
+        <div class="col-md">
+          {{ with .Get "title" }}<h1 class="display-1">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-hero-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
+          {{ with .Get "subtitle" }}<h2>{{ . | html }}</h2>{{ end }}  
             {{ if eq .Page.File.Ext "md" }}
               {{ .Inner | markdownify }}
             {{ else }}
               {{ .Inner | htmlUnescape | safeHTML }}
             {{ end }}
 
-            {{ if ne $link_url "#" }}
-            <a class="btn btn-lg btn-info" href="{{ $link_url }}">{{ $link_title }}</a>
-            {{ end }}
         </div>
 
         <div class="col-md is-half is-hidden-touch col-terminal">
