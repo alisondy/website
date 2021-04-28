@@ -44,31 +44,31 @@ Flux v2 will be GA within the next few months! This means that Flux v1 will be d
 
 {{% blocks/feature icon="fab fa-git-square fa-3x" title="Declarative" height="auto" color="primary" %}}
 
-Describe the entire desired state of your system in [Git](https://git-scm.com). This includes apps, configuration,
-dashboards, monitoring, and everything else.
+Describe the entire desired state of your system in [Git](https://git-scm.com).
+
+This includes apps, configuration, dashboards, monitoring, and everything else.
 
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fas fa-robot fa-3x" title="Automated" height="auto"%}}
 
-  Use [YAML](https://yaml.org) to enforce conformance to the declared system. 
-  You don't need to run [`kubectl`](https://kubectl.docs.kubernetes.io/) because all changes are synced automatically.
+Use [YAML](https://yaml.org) to enforce conformance to the declared system.
+
+You don't need to run [`kubectl`](https://kubectl.docs.kubernetes.io/) because all changes are synced automatically.
 
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fas fa-code fa-3x" title="Auditable" height="auto"  %}}
 
-  Everything is controlled through pull requests. Your Git history provides a sequence of transactions, allowing you to
-  recover state from any snapshot.
+Everything is controlled through pull requests. 
+
+Your Git history provides a sequence of transactions, allowing you to recover state from any snapshot.
 
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fas fa-drafting-compass fa-3x" title="Designed for Kubernetes" height="auto"  %}}
 
-  Declaratively configurable using Custom Resources, state reports in the
-  [object's status](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#object-spec-and-status)
-  and via [Kubernetes Events](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/),
-  and integrations with Kubernetes RBAC
+Declaratively configurable using Custom Resources, state reports in the [object's status](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#object-spec-and-status) and via [Kubernetes Events](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application-introspection/),and integrations with Kubernetes RBAC
 
 {{% /blocks/feature %}}
 
@@ -152,6 +152,10 @@ In this 5 video series, Geert Baeke takes a deep dive of Flux v2 and the use of 
 
 The set of APIs and controllers that make up the runtime for Flux. You can use the GitOps Toolkit to extend Flux, and to build your own systems for continuous delivery.
 
+{{% button link_url="/docs/gitops-toolkit/source-watcher/" link_title="Get started" %}}
+
+{{% button link_url="/docs/components" link_title="Learn More" %}}
+
 {{% /blocks/project %}}
 
 {{% blocks/project title="Flagger"
@@ -162,6 +166,10 @@ Kubernetes Operator for the automation of promoting canary deployments using Ist
 
 The canary analysis can be extended with webhooks for running system integration/acceptance tests, load tests, or any other custom validation.
 
+{{% button link_url="/docs/gitops-toolkit/source-watcher/" link_title="Get started" %}}
+
+{{% button link_url="/docs/components" link_title="Learn More" %}}
+
 {{% /blocks/project %}}
   
 {{% blocks/project title="Flux v1 and Helm Operator"
@@ -171,6 +179,10 @@ The canary analysis can be extended with webhooks for running system integration
 We owe our success and good reputation as GitOps project to Flux and Helm Operator. They are the v1 iteration of our project and currently in [maintenance mode](https://github.com/fluxcd/flux/issues/3320).
 
 We strongly advise everyone to familiarize themselves with Flux v2 and start the process of migrating.
+
+{{% button link_url="/docs/gitops-toolkit/source-watcher/" link_title="Get started" %}}
+
+{{% button link_url="/docs/components" link_title="Learn More" %}}
 
 {{% /blocks/project %}}
 
