@@ -1,6 +1,6 @@
 # Fast NONBlOCKING IO to stdout can
 # cause Netlify builds to terminate unexpectantly. This forces stdout to block.
-BLOCK_STDOUT_CMD           := python -c "import os,sys,fcntl; \
+BLOCK_STDOUT_CMD           := python3 -c "import os,sys,fcntl; \
                                            flags = fcntl.fcntl(sys.stdout, fcntl.F_GETFL); \
                                            fcntl.fcntl(sys.stdout, fcntl.F_SETFL, flags&~os.O_NONBLOCK);"
 DOCSY_COMMIT 			   ?= 0070ccffaed2b88d673e4a01e382720c4fc59f67
@@ -55,9 +55,9 @@ $(FONT_AWESOME_TARGET): ## Downloads the Docsy Font Awesome dependency.
 	ln -sf Font-Awesome themes/docsy/assets/vendor/Font-Awesome-${FONT_AWESOME_SEMVER}
 
 gen-content: ## Generates content from external sources.
-	hack/adopters.py
-	hack/gen-content.py
-	hack/import-calendar.py
+	python3 hack/adopters.py
+	python3 hack/gen-content.py
+	python3 hack/import-calendar.py
 	hack/import-flux2-assets.sh
 
 serve: gen-content theme ## Spawns a development server.
