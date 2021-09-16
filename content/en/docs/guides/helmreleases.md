@@ -40,16 +40,9 @@ They can be declared by creating a `HelmRepository` resource, the
 source-controller will fetch the Helm repository index for this
 resource on an interval and expose it as an artifact:
 
-```yaml
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: HelmRepository
-metadata:
-  name: podinfo
-  namespace: flux-system
-spec:
-  interval: 1m
-  url: https://stefanprodan.github.io/podinfo
-```
+{{% codeblock file="/static/snippet/docs/helmrepository-source-helmrelease.sh" language="sh" %}}
+
+{{% codeblock file="/static/snippet/docs/helmrepository-source-helmrelease.yaml" language="yaml" %}}
 
 The `interval` defines at which interval the Helm repository index
 is fetched, and should be at least `1m`. Setting this to a higher

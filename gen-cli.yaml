@@ -1,0 +1,7 @@
+generate-cli:
+  helmrepository-source-helmrelease:
+    cli-flags: 'create source helm podinfo --namespace=flux-system --interval=1m --url=https://stefanprodan.github.io/podinfo'
+    path: 'static/snippet/docs/'
+  gitrepository-source-helmrelease:
+    cli-flags: 'create source git podinfo --namespace=flux-system --branch=master --interval=1m --url=https://stefanprodan.github.io/podinfo'
+    path: 'static/snippet/docs/'
