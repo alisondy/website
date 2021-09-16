@@ -223,7 +223,7 @@ generate() {
 
         OUT_SNIPPET_FILE=$(basename "$OUT_SNIPPET_PATH")
 
-        echo "flux $SNIPPET_FLAGS --export > $OUT_SNIPPET_FILE" > "$IN_SNIPPET_PATH"
+        printf "flux %s \x5C\n--export > %s" "$SNIPPET_FLAGS" "$OUT_SNIPPET_FILE" > "$IN_SNIPPET_PATH"
 
         # In this instance we explicitly want splitting on the snippet flags
         #shellcheck disable=SC2086
