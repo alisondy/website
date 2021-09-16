@@ -8,10 +8,6 @@ draft: true
 
 ### Cloud Storage
 
-It is inadvisable while still possible to use a `Bucket` as a source for a `HelmRelease`,
-as the whole storage bucket will be downloaded by source controller at each sync. The
-bucket can easily become very large if there are frequent releases of multiple charts
-that are stored in the same bucket.
 
 A better option is to use [Chartmuseum](https://github.com/helm/chartmuseum) and run a cluster
 local Helm repository that can be used by source controller. Chartmuseum has support
