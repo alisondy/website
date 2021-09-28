@@ -1,21 +1,25 @@
 ---
 title: "Chartmuseum as a backend for Bucket source"
 date: 2021-09-15T20:42:59+01:00
-draft: true
 ---
+
+## Before You Begin
+
+You will need 
+- Kubernetes Cluster
+- Flux CLI
+- Flux bootstrapped on the cluster
 
 <!-- Original Documentation -->
 
-### Cloud Storage
+[Chartmuseum](https://github.com/helm/chartmuseum) is a local Helm repository that can be used by source controller.
+Chartmuseum has support for multiple different cloud storage solutions such as S3, GCS, and Azure Blob Storage.
+You are not limited to only using storage providers that support the S3 protocol.
 
+You can explore the API using a browser.	The API can be explored using a browser.
 
-A better option is to use [Chartmuseum](https://github.com/helm/chartmuseum) and run a cluster
-local Helm repository that can be used by source controller. Chartmuseum has support
-for multiple different cloud storage solutions such as S3, GCS, and Azure Blob Storage,
-meaning that you are not limited to only using storage providers that support the S3 protocol.
-
-You can deploy a Chartmuseum instance with a `HelmRelease` that exposes a Helm repository stored
-in a S3 bucket. Please refer to [Chartmuseums how to run documentation](https://chartmuseum.com/docs/#how-to-run)
+Deploy a Chartmuseum instance with a `HelmRelease` that exposes a Helm repository stored in a S3 bucket. 
+Refer to [Chartmuseums how to run documentation](https://chartmuseum.com/docs/#how-to-run)
 for details about how to use other storage backends.
 
 ```yaml
@@ -109,7 +113,7 @@ artifact of the referenced source, and either fetch the chart for a
 It will then make it available as a `HelmChart` artifact to be used by
 the helm-controller.
 
-The `chart.spec.chart` can either contain:
+The `chart.spec.chart` can contain:
 
 * The name of the chart as made available by the `HelmRepository`
   (without any aliases), for example: `podinfo`

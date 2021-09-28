@@ -1,7 +1,6 @@
 ---
 title: "Configure WebhookReceivers to trigger HelmRelease updates"
 date: 2021-09-15T20:43:29+01:00
-draft: true
 ---
 
 <!-- Original Documentation -->

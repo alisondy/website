@@ -1,7 +1,6 @@
 ---
 title: "Deploy a Helm Chart using HelmRelease"
 date: 2021-09-15T20:42:50+01:00
-draft: true
 ---
 
 ## Before You Begin

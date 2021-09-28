@@ -1,7 +1,6 @@
 ---
 title: "Manage Helm Charts"
 date: 2021-09-15T20:40:32+01:00
-draft: true
 ---
 
 The [helm-controller](../components/helm/_index.md) allows you to

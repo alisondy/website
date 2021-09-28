@@ -1,7 +1,6 @@
 ---
 title: "Notifications"
 date: 2021-09-15T20:55:10+01:00
-draft: true
 ---
 
 <!-- Original Documentation -->
